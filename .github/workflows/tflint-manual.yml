@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v3
       name: Checkout source code
 
-    - uses: terraform-linters/setup-tflint@v4.0.0
+    - uses: terraform-linters/setup-tflint@v4
       name: Setup TFLint
 
     - name: Show version
@@ -27,4 +27,15 @@ jobs:
 
     - name: Run TFLint
       run: tflint -f compact
+
+    - uses: terraform-linters/setup-tflint@v4
+      with:
+        tflint_wrapper: true
+
+    - id: tflint
+      run: tflint -f compact
+
+    - run: echo ${{ steps.tflint.outputs.stdout }}
+    - run: echo ${{ steps.tflint.outputs.stderr }}
+    - run: echo ${{ steps.tflint.outputs.exitcode }}
 
