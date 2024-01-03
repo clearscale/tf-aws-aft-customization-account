@@ -9,3 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Addded
 - [DOCS2-41] Initial commit for Acccount Customizaton
 
+## [0.0.2]
+## Addded
+- [DOCS2] TFLint workflow
