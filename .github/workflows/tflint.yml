@@ -29,4 +29,15 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
     - name: Run TFLint
-      run: tflint -f compact
+      run: tflint -f compact --recursive
+
+    - uses: terraform-linters/setup-tflint@v4
+      with:
+        tflint_wrapper: true
+
+    - id: tflint
+      run: tflint -f compact --recursive
+
+    - run: echo ${{ steps.tflint.outputs.stdout }}
+    - run: echo ${{ steps.tflint.outputs.stderr }}
+    - run: echo ${{ steps.tflint.outputs.exitcode }}
