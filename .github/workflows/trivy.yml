@@ -13,7 +13,7 @@ jobs:
         with:
           scan-type: 'fs'
           scanners: 'vuln,secret,config'
-          scan-ref: './'
+          #scan-ref: './'
           hide-progress: false
           format: 'sarif'
           output: 'trivy-results.sarif'
