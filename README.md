@@ -1,7 +1,9 @@
-# aft-account-customizations-examples
+# AFT: Account Customizations
+
 This project contains a practical use case of the AFT account customizations logic. More details about the AFT see [AFT Doc](https://developer.hashicorp.com/terraform/tutorials/aws/aws-control-tower-aft)
 
 ## Background and solutions considerations
+
 When working in multi-account scenarios it is quite common to come across the following situation:
 - 3 Workload accounts (1 development account, 1 staging account and 1 production account)
 - 1 Account for SLDC (Pipelines, Version Control and GITOPS)
