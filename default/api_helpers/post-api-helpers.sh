@@ -1,6 +1,3 @@
+#!/bin/bash
 
-echo "aws sts get-caller-identity"
-aws sts get-caller-identity
-
-
-aws ec2 describe-regions
+echo "Executing Post-API Helpers"
